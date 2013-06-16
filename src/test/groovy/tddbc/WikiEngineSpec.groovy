@@ -21,12 +21,12 @@ class WikiEngineSpec extends Specification{
         line                    | expected
         "_italic_"              | "<i>italic</i>"
         "*bold*"                | "<b>bold</b>"
-        "= Heading ="           | "<h1> Heading </h1>"
-        "== Subheading =="      | "<h2> Subheading </h2>"
-        "=== Level 3 ==="       | "<h3> Level 3 </h3>"
-        "==== Level 4 ===="     | "<h4> Level 4 </h4>"
-        "===== Level 5 ====="   | "<h5> Level 5 </h5>"
-        "====== Level 6 ======" | "<h6> Level 6 </h6>"
+        "= Heading ="           | "<h1>Heading</h1>"
+        "== Subheading =="      | "<h2>Subheading</h2>"
+        "=== Level 3 ==="       | "<h3>Level 3</h3>"
+        "==== Level 4 ===="     | "<h4>Level 4</h4>"
+        "===== Level 5 ====="   | "<h5>Level 5</h5>"
+        "====== Level 6 ======" | "<h6>Level 6</h6>"
         "_italic_ and *bold*"   | "<i>italic</i> and <b>bold</b>"
         "other string"          | "other string"
     }
