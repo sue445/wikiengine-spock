@@ -18,8 +18,14 @@ class WikiEngineSpec extends Specification{
         sut.format(line) == expected
 
         where:
-        line        | expected
-        "_italic_"  | "<i>italic</i>"
-        "*bold*"    | "<b>bold</b>"
+        line                    | expected
+        "_italic_"              | "<i>italic</i>"
+        "*bold*"                | "<b>bold</b>"
+        "= Heading ="           | "<h1> Heading </h1>"
+        "== Subheading =="      | "<h2> Subheading </h2>"
+        "=== Level 3 ==="       | "<h3> Level 3 </h3>"
+        "==== Level 4 ===="     | "<h4> Level 4 </h4>"
+        "===== Level 5 ====="   | "<h5> Level 5 </h5>"
+        "====== Level 6 ======" | "<h6> Level 6 </h6>"
     }
 }
