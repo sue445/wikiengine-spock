@@ -8,13 +8,14 @@ package tddbc
  */
 class WikiEngine {
     String format(String line){
-        switch (line){
-        case ~/_(.+)_/:
-            return line.replaceAll(/_(.+)_/, /<i>$1<\/i>/)
-        case ~/\*(.+)\*/:
-            return line.replaceAll(/\*(.+)\*/, /<b>$1<\/b>/)
-        default:
-            return line
+        def wikiFormats = [
+                /_(.+)_/   : /<i>$1<\/i>/,
+                /\*(.+)\*/ : /<b>$1<\/b>/,
+        ]
+
+        wikiFormats.inject(line){ work, entry ->
+            work = work.replaceAll(entry.key, entry.value)
+            work
         }
     }
 }
