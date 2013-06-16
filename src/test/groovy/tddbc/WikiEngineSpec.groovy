@@ -27,5 +27,6 @@ class WikiEngineSpec extends Specification{
         "==== Level 4 ===="     | "<h4> Level 4 </h4>"
         "===== Level 5 ====="   | "<h5> Level 5 </h5>"
         "====== Level 6 ======" | "<h6> Level 6 </h6>"
+        "other string"          | "other string"
     }
 }
