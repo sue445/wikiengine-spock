@@ -20,5 +20,6 @@ class WikiEngineSpec extends Specification{
         where:
         line        | expected
         "_italic_"  | "<i>italic</i>"
+        "*bold*"    | "<b>bold</b>"
     }
 }

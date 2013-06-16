@@ -11,6 +11,8 @@ class WikiEngine {
         switch (line){
         case ~/_(.+)_/:
             return line.replaceAll(/_(.+)_/, /<i>$1<\/i>/)
+        case ~/\*(.+)\*/:
+            return line.replaceAll(/\*(.+)\*/, /<b>$1<\/b>/)
         default:
             return line
         }
